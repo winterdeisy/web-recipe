@@ -1,0 +1,49 @@
+<!-- 이미지를 보여줄때 이미지 크기를 특정한 크기로 만들거나 -->
+<!-- 이미지 주변에 라운드효과를 주고 싶을때  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .thumbnail {
+            margin: 10px;
+            /* 전체 이미지의 크기 조절하기  */
+            /* width, height값 모두 지정해줄때 이미지가 표현됨 */
+            width: 150px;
+            height: 150px;
+            /*  적절한 장면이 화면에 들어오게 됨 */
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* cover: 원본이미지가 있을때 비율을 왜곡하지 않으면서 일부로 커버 */
+            /* contain: 반복으로 전체를 커버 -> no-repeat으로 제거 가능  */
+            background-position: center center;
+            /* 외곽이 아닌 가운데 부분 */
+            border: 5px solid black;
+            /* 테두리 */
+        }
+        .thumbnail.round {
+            /* 기존 이미지에서 테두리에 라운드 효과 */
+            border-radius: 20px;
+        }
+        .thumbnail.circle {
+            /* 원으로 테두리를 표현하기  */
+            border-radius: 100%;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- div 태그로 표현된 이미지를 조작한다 -->
+    <div class = "thumbnail" style="background-image: url(balloon.jpg);"></div>
+    <!-- 테두리 효과를 적용할 이미지 -->
+    <div class = "thumbnail round" style="background-image: url(balloon.jpg);"></div>
+    <!-- 테두리를 원으로 표현 -->
+    <div class = "thumbnail circle" style="background-image: url(balloon.jpg);"></div>
+
+    <!-- 원본 이미지 -->
+    <img src="balloon.jpg" alt="">
+</body>
+</html>
