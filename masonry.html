@@ -1,0 +1,90 @@
+    <!-- masonry layout이란? 레이아웃 구성요소를 벽돌을 쌓는 것처럼 배치하는 형태 (ex. 핀터레스트) -->
+    <!-- css 다단(multi column) 기능 -->
+    <!-- https://codepen.io/dudleystorey/full/yqrhw/-->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <style>
+            #columns {
+                /* 한 줄에 컬럼이 세개 오도록 정렬한다  */
+                column-count: 3;
+                /* 컬럼의 크기가 300px이 되도록 설정 */
+                column-width: 350px;
+                /* figure 간의 간격 */
+                column-gap: 15px;
+            }
+            /* figure와 caption의 분리를 제거 */
+            #columns figure {
+                display: inline-block;
+                margin: 0px;
+                /* figure 간의 간격 */
+                margin-bottom: 15px;
+                /* figure에 그림자 효과 주기 */
+                box-shadow: 3px 3px 5px rgb(97, 97, 97);
+            }
+            /* figure 안쪽 img 태그를 figure태그 크기에 맞추도록 설정 */
+            #columns figure img {
+                width: 100%;
+            }
+            #columns figure figcaption {
+                /* 캡션 위에 테두리 효과 주기  */
+                border-top: 1px solid black;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- figure를 멀티컬럼으로 묶기  -->
+        <div id="columns">
+            <figure>
+                <!-- figure : 삽화 정보들을 그룹핑하는 태그  -->
+                <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/cinderella.jpg">
+                <figcaption>Cinderella wearing European fashion of the mid-1860’s</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/rapunzel.jpg">
+                    <figcaption>Rapunzel, clothed in 1820’s period fashion</figcaption>
+                    </figure>
+                    
+                <figure>
+                    <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/belle.jpg">
+                    <figcaption>Belle, based on 1770’s French court fashion</figcaption>
+                    </figure>
+                
+                    <figure>
+                    <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/mulan_2.jpg">
+                    <figcaption>Mulan, based on the Ming Dynasty period</figcaption>
+                    </figure>
+                    
+                <figure>
+                    <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/sleeping-beauty.jpg">
+                    <figcaption>Sleeping Beauty, based on European fashions in 1485</figcaption>
+                    </figure>
+                    
+                <figure>
+                    <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/pocahontas_2.jpg">
+                    <figcaption>Pocahontas based on 17th century Powhatan costume</figcaption>
+                    </figure>
+                
+                    <figure>
+                    <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/snow-white.jpg">
+                    <figcaption>Snow White, based on 16th century German fashion</figcaption>
+                    </figure>	
+                
+                <figure>
+                    <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/ariel.jpg">
+                    <figcaption>Ariel wearing an evening gown of the 1890’s</figcaption>
+                    </figure>
+                
+                    <figure>
+                    <img src="//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/tiana.jpg">
+                    <figcaption>Tiana wearing the <i>robe de style</i> of the 1920’s</figcaption>
+                    </figure>	
+                </div>
+    </body>
+    </html>
