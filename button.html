@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn {
+            text-decoration: none;
+            /* 기본크기 2배 */
+            font-size: 2rem; 
+            color: white;
+            /* 컨텐츠 내부 크기 */
+            padding: 10px 20px 10px 20px;
+            /* 화면에서 떨어뜨리기 */
+            margin: 20px;
+            /* 줄바꿈 없이 block */
+            display: inline-block;
+            /* 사각형 라운드 처리 */
+            border-radius: 10px;
+            /* 0.1초동안 장면전환 효과 */
+            transition: all 0.1s;
+            /* 텍스트 그림자 효과 */
+            text-shadow: 0px -2px black;
+            /* 폰트 */
+            font-family: 'Cinzel', serif;
+        }
+        .btn:active {
+            /* link:방문전 링크 상태, visited: 방문후 링크상태, 
+            hover:마우스 오버했을때 링크상태, active: 클릭했을때 링크 상태 */
+            
+            /* 눌렸을때 Y방향으로 10PX 이동 */
+            transform: translateY(3px);
+        }
+        .btn.blue {
+            background-color: green;
+            /* 버튼 그림자 색은 아랫쪽 테두리로 */
+            border-bottom: 5px solid rgb(1, 94, 1);
+        }
+        .btn.blue:active {
+            /* 누르면 아랫쪽 테두리가 얇아짐, 좀 더 동적인 효과 */
+            border-bottom: 2px solid rgb(1, 94, 1);
+        }
+        .btn.red {
+            background-color: red;
+            border-bottom: 5px solid rgb(161, 0, 0);
+        }
+        .btn.red:active {
+            border-bottom: 2px solid rgb(161, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <!-- 링크를 버튼 모양으로-->
+    <a class="btn blue" href="#blue">blue</a>
+    <a class="btn red" href="#red">red</a>
+    
+</body>
+</html>
