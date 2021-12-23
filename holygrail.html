@@ -1,0 +1,54 @@
+<!-- holy grail layout : 성배 레이아웃, felx box를 사용한다 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: solid black 5px;
+        }
+        .container>*{
+            border: solid red 5px;
+        }
+        .container>.content>*{
+            border: solid green 5px;
+        }
+        .container .content {
+            padding-left: 200px;
+            padding-right: 150px;
+        }
+        .container .content>*{
+            /* 컨텐츠의 부피감이 사라진다 */
+            float: left;
+        }
+        .container footer{
+            clear:both;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>HEADER</h1>
+        </header>
+        <section class="content">
+            <main>
+                MAIN(CENTER)
+            </main>
+            <nav>
+                NAV(LEFT)
+            </nav>
+            <aside>
+                ASIDE(RIGHT)
+            </aside>
+            </section>
+            <footer>
+                FOOTER
+            </footer>
+
+    </div>
+</body>
+</html>

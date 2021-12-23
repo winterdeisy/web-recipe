@@ -1,0 +1,60 @@
+<!-- html, css만으로 트리맵 만들기 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet"
+    href="fontello/css/animation.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tree, .tree ul {
+            /* 리스트의 점을 사라지게 하기 */
+            list-style: none;
+            /* 리스트 간 간격을 좁히기  */
+            padding-left: 20px;
+        }
+        .tree a:before {
+            /* 링크 앞에 컨텐츠 추가 */
+            content: '♡';
+        }
+        .tree label:before {
+            content: '♥';
+        }
+        /* 속성 선택자      속성의 상태 선택자 */  
+        .tree input[type="checkbox"]:checked~ul {
+            /* checked가 되어있을때 ul태그를 안보이게 하기 */
+            display: none;
+
+        }
+    </style>
+</head>
+<body>
+    <ul class ="tree">
+        <li>
+            <input type="checkbox" id = "root">
+            <!-- lable은 설명해주는 태그, 누구의 레이블인지 for안에 적는다. -->
+            <!-- 레이블을 클릭했을때 레이블이 가리키는 객체를 가리킨다  -->
+            <label for="root">게시판</label>
+        
+            <ul>
+                <li><a href="">node1</a></li>
+                <li><a href="">node2</a></li>
+                <li>
+                    <input type="checkbox" id="node3">
+                    <label for="node3">node3</label>
+                    <ul>
+                        <li><a href="">node3-1</a></li>
+                        <li><a href="">node3-2</a></li>
+                        <li><a href="">node3-3</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </li>
+    </ul>
+
+</body>
+</html>
