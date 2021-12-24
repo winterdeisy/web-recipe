@@ -4,6 +4,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+
         <style>
             body, h1 {
                 margin: 0;
@@ -40,11 +44,22 @@
                 font-size: 1.5rem;
                 text-align: center;
                 color: white;
+                font-family: 'Cinzel', serif;
             }
             .scene header h1 {
                 /* 기본 크기의 2배 */
                 font-size: 2rem;
                 margin-bottom: 1rem;
+                font-weight: 300;
+            }
+            /* h1태그가 끝나는 부분 */
+            .scene header h1:after{
+                content: '';
+                border-bottom: 1px solid white;
+                width: 10rem;
+                display: block;
+                margin:0 auto;
+                margin-top: 1rem;
             }
         </style>
         <meta charset="UTF-8">
