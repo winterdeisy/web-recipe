@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         .container {
             border: solid black 5px;
         }
@@ -23,6 +26,15 @@
         .container .content>*{
             /* 컨텐츠의 부피감이 사라진다 */
             float: left;
+        }
+        .container .content main {
+            width:100%;
+        }
+        .container .content nav {
+            width: 200px;
+            margin-left: -100%;
+            left:-200px;
+            position: relative;
         }
         .container footer{
             clear:both;

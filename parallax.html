@@ -1,0 +1,76 @@
+<!-- parallax: 시차, 멀리 있는 물체는 천천히 - 가까운 물체는 빠르게 속도차이-->
+<!-- background-attachment: fixed; -->
+<!-- 배경은 고정되어 있고 앞쪽의 텍스트는 움직이게 한다  -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body, h1 {
+                margin: 0;
+            }
+            .scene {
+                /* view port : 사용자가 바라보는 화면의 크기 */
+                height: 100vh;
+                /* 부모보다 자식이 더 큰 경우 자식을 hidden */
+                overflow: hidden;
+                /* scene의 background-image는 스크롤과 상관없이 고정된 위치 고수 */
+                background-attachment: fixed;
+                /* 이미지가 화면 전체를 사용하도록 설정 */
+                background-size: cover;
+            }
+            .scene.one {
+                /* 컨텐츠의 부피만큼 배경이미지가 만들어진다 */
+                background-image: url('river.jpg');
+            }
+            .scene.two {
+                background-image: url('night-sky.jpg');
+            }
+            .scene.three {
+                background-image: url('northern-lights.jpg');
+            }
+            .scene header {
+                /* 해당 크기 이상으로 화면이 커지지못함 */
+                max-width: 80%;
+                /* 가운데로 이동 */
+                position: relative;
+                left: 50%;
+                top: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                /* header의 font 설정 */
+                font-size: 1.5rem;
+                text-align: center;
+                color: white;
+            }
+            .scene header h1 {
+                /* 기본 크기의 2배 */
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- section 태그가 scen -->
+    <section class ="scene one">
+        <header>
+            <h1>lorem ipsom dolor sit ime.</h1>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sagittis scelerisque fermentum. Suspendisse euismod massa id quam commodo porttitor. In ac lacinia nisi. Pellentesque vitae mauris auctor erat finibus faucibus. Orci varius natoque penatibus et magnis dis parturient montes
+        </header>
+    </section>
+    <section class ="scene two">
+        <header>
+            <h1>lorem ipsom dolor sit ime.</h1>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sagittis scelerisque fermentum. Suspendisse euismod massa id quam commodo porttitor. In ac lacinia nisi. Pellentesque vitae mauris auctor erat finibus faucibus. Orci varius natoque penatibus et magnis dis parturient montes
+        </header>
+    </section>
+    <section class ="scene three">
+        <header>
+            <h1>lorem ipsom dolor sit ime.</h1>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sagittis scelerisque fermentum. Suspendisse euismod massa id quam commodo porttitor. In ac lacinia nisi. Pellentesque vitae mauris auctor erat finibus faucibus. Orci varius natoque penatibus et magnis dis parturient montes
+        </header>
+    </section>
+</body>
+</html>
