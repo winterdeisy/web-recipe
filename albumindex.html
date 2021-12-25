@@ -39,7 +39,13 @@
             }    
             #wrapper>*>*{
                 /* 직계자손의 직계자손 */
-                border: 5px solid blue;
+                /* border: 5px solid blue; */
+            }
+            #header {
+                /* 화면 가운데로 위치 */
+                text-align: center;
+                padding-top: 2rem;
+                padding-bottom: 2rem;
             }
             header .avatar img {
                 border-radius: 100%;
@@ -64,6 +70,7 @@
             }
             #header h1 strong{
                 color: white;
+                font-weight: 100;
             }
             #header h1 a{
                 text-decoration: none;
@@ -75,6 +82,21 @@
                 /* hover했을때 링크는 더 밝게 바꾸기 */
                 color:white;
             }
+            #header ul.icons li {
+                /* 한줄에 나타나게 하기 */
+                display: inline-block;
+                margin-right: 1rem;
+            }
+            #header ul.icons li a {
+                color: white;
+                text-decoration: none;
+                /* display: none; */
+                border: solid 1px white;
+                border-radius: 20%;
+            }
+            #header ul.icons li a:hover{
+                color: rgba(255,255,255,0.5);
+            }
 
         </style>
         </head>
@@ -82,7 +104,6 @@
     
             <!-- Wrapper -->
                 <div id="wrapper">
-    
                     <!-- Header -->
                         <header id="header">
                             <span class="avatar"><img src="balloon.jpg" alt="풍선" /></span>
