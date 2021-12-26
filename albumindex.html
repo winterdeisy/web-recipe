@@ -19,18 +19,23 @@
             <link rel="stylesheet" href="fontello-bcf36fd2/css/fontello.css">
             <link rel="stylesheet" href="assets/css/main2.css" />
             <style>
-        body{
-            background-image: url(images/bg.jpg);
-            background-size: cover;
-        }
+  
         </style>
         <style>
             body {
                 /* 배경이미지 셋팅 */
-                background-image: url('balloon.jpg');
+                /* background-image: url('balloon.jpg'); */
+                background-color: black;
+                
                 background-size: cover;
             }
+            
+            /* 구역 나누기 */
             #wrapper {
+                /* 최대 폭 도달시 크기상태 유지 */
+                max-width: 68rem;
+                /* 자동으로 가운데로 정렬 */
+                margin:auto;
             }
             #wrapper>* {
                 /* 직계자손(header, section, footer) 전체 */
@@ -50,6 +55,7 @@
                 width: 250px;
                 height: 250px;
                 display: block;
+                box-shadow: 3px 3px 5px white;
                 /* box-shadow: 3px 3px 5px white; */
             }
             header .avatar {
@@ -58,7 +64,6 @@
                 /* 컨텐츠와 테두리의 간격 : 기본 폰트 크기 16px = 1rem */
                 padding: 0.5rem;
                 /* 투명도 */
-                background-color: rgba(255,255,255,0.5);
             }
             #header h1{
                 font-size: 1.5rem;
@@ -117,7 +122,7 @@
             #main .thumbnails h3 {
                 text-align: center;
                 font-weight: 100;
-                color: white;
+                color: rgba(255,255,255,0.5);
                 font-size: 0.8rem;
                 border-left: 1px solid rgba(255,255,255,0.5);
                 border-right: 1px solid rgba(255,255,255,0.5);
@@ -134,7 +139,31 @@
                 margin: 0;
             }
             #footer {
+                text-align: center;
+                font-weight: 200;
+                color: rgba(255,255,255,0.5);
+            }
+            #footer:before {
+                content: '';
+                display: block;
+                width: 10rem;
+                /* 자동으로 가운데로 오게 됨 */
+                margin: auto;
                 border-top: 1px solid rgba(255,255,255,0.5);
+                font-size: 0.6rem;
+            }
+            #footer a {
+                color: rgba(255,255,255,0.5);
+                text-decoration: none;
+                border-bottom: 1px dotted rgba(255,255,255,0.5);
+            }
+            #footer a:hover {
+                color: white;
+            }
+            @media(max-width:480px) {
+                #main .thumbnails {
+                    display: block;
+                }
             }
         </style>
         </head>
