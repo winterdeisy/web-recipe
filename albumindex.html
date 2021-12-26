@@ -31,11 +31,9 @@
                 background-size: cover;
             }
             #wrapper {
-                border: 5px solid red;
             }
             #wrapper>* {
                 /* 직계자손(header, section, footer) 전체 */
-                border: 5px solid green;
             }    
             #wrapper>*>*{
                 /* 직계자손의 직계자손 */
@@ -97,7 +95,47 @@
             #header ul.icons li a:hover{
                 color: rgba(255,255,255,0.5);
             }
-
+            #main .thumbnails {
+                /* div 요소들이 같은 행에 위치하게 된다 */
+                display: flex;
+            }
+            #main .thumbnails>div {
+                /* 화면의 크기에 따라서 아이템들이 균등하게 커진다 */
+                flex-grow: 1;
+                /* 여백주기 */
+                margin-right: 1rem;
+                margin-left: 1rem;
+            }
+            #main .thumbnails img{
+                /* 각 img는 화면 전체를 쓰도록 설정 */
+                width: 100%;
+                /* 윗부분을 동그랗게 */
+                border-top-left-radius: 0.6rem;
+                border-top-right-radius: 0.6rem;
+                display: block;
+            }
+            #main .thumbnails h3 {
+                text-align: center;
+                font-weight: 100;
+                color: white;
+                font-size: 0.8rem;
+                border-left: 1px solid rgba(255,255,255,0.5);
+                border-right: 1px solid rgba(255,255,255,0.5);
+                border-bottom: 1px solid rgba(255,255,255,0.5);
+                border-bottom-left-radius: 0.6rem;
+                border-bottom-right-radius: 0.6rem;
+                background-color: rgba(255,255,255,0.1);
+                margin: 0;
+            }
+            #main .thumbnails a {
+                display: block;
+                margin-bottom: 1.5rem;
+                text-decoration: none;
+                margin: 0;
+            }
+            #footer {
+                border-top: 1px solid rgba(255,255,255,0.5);
+            }
         </style>
         </head>
         <body>
