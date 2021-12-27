@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/@mojs/core"></script>
+    <script>
+        var first = new mojs.Shape({
+            shape:'circle',
+            radius:{0:40},
+            stroke:'cyan',
+            // 테두리가 두꺼워졌다가 얇아지는 모션
+            strokeWidth:{20:0},
+            // 파문같이 만들기
+            fill:'none',
+            //위치
+            left:0, top:0,
+            duration:300
+        });
+        //second의 배열
+        var seconds = [];
+        //여러가지 컬러
+        var colors = ['deeppink','magenta','blue','tomato'];
+        for(var i=0; i<4; i++) {
+            //4번 반복
+        var second = new mojs.Shape({
+            //first에 종속되게 만들기
+            parent:first.el,
+
+            shape:'circle',
+            radius:'rand(10,30)',
+            stroke:colors[i],
+            strokeWidth:{10:0},
+            fill: 'none',
+            left:'50%', top:'50%',
+            x:'rand(-100,50)',
+            y:'rand(-100,50)',
+            // delay
+            delay:250
+        });
+        //push로 추가
+        seconds.push(second);
+    }
+        seconds.push();
+        document.addEventListener('click',function(e) {
+            //사용자의 마우스를 따라오게 만들기
+            first.tune({x:e.pageX, y:e.pageY}).replay();
+            // second는 first의 상대적인 위치에 존재
+            // second.replay();
+            for(var i=0; i<seconds.length; i++) {
+                seconds[i].generate().replay();
+            }
+        })
+    </script>
+</body>
+</html>
