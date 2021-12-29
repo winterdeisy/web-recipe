@@ -1,0 +1,41 @@
+body {
+    background-image: url('https://loremflickr.com/320/240');
+    /* 화면이 잘리지 않게 함 */
+    background-size: cover;
+    min-height: 100vh;
+    margin: 0;
+}
+article {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: balck;
+    max-width: 20rem;
+    /* 텍스트가 화면 가운데에 위치하게 하기 */
+    /* 스크롤을 해도 움직이지 않게 하기 */
+    position: fixed;
+    /* 부모의 50% 지점 */
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    font-weight: 200;
+    padding: 0.2rem;
+}
+.control {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: white;
+    padding: 0.5rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.control ul {
+    list-style: none;
+}
+.control li {
+    /* 나란히 배치 */
+    display: inline-block;
+    padding: 0 0.5rem;
+}
+.control a {
+    color: white;
+    text-decoration: none;
+}
