@@ -16,6 +16,32 @@
         .content>*{
             border: 5px solid green;
         }
+        .container .content {
+            /* fix되어있는 부분  */
+            padding-left:200px;
+            padding-right:150px;
+        }
+        .container .content>*{
+            /* content의 부피감이 사라짐 */
+            float: left;
+        }
+        .content main {
+            width: 100%;
+        }
+        .content nav {
+            position: relative;
+            width: 200px;
+            margin-left: -100%;
+            left: -200px;
+        }
+        .content aside {
+            width: 150px;
+            margin-right:-150px;
+        }
+        .container footer {
+            /* footer는 float의 영향을 받지 않음 */
+            clear:both;
+        }
     </style>
 </head>
 <body>
