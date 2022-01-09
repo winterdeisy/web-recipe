@@ -7,8 +7,8 @@
     <title>Document</title>
     <style>
         .container {
-            min-width: 600px;
-        }
+            /* min-width: 600px; */
+            }
         .container {
             border: 5px solid black;
         }
@@ -48,6 +48,35 @@
             /* footer는 float의 영향을 받지 않음 */
             clear:both;
         }
+        
+        @media (max-width:599px) {
+
+                .container .content {
+                /* fix되어있는 부분  */
+                padding-left:0;
+                padding-right:0;
+                overflow: visible;
+            }
+            .container .content>*{
+                /* content의 부피감이 사라짐 */
+                float: none;
+                padding-bottom: 0;
+                margin-bottom: 0;
+            }
+            .content main {
+                width: 100%;
+            }
+            .content nav {
+                position: relative;
+                width: auto;
+                margin-left: 0%;
+                left: 0;
+            }
+            .content aside {
+                width: auto;
+                margin-right:0;
+            }
+                }
     </style>
 </head>
 <body>
